@@ -1,0 +1,12 @@
+[build-system]
+requires = ["uv_build>=0.11,<0.14"]
+build-backend = "uv_build"
+
+[project]
+name = "xhs-tool"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["Pillow>=11"]
+
+[project.scripts]
+xhs-tool = "xhs_tool.cli:main"
