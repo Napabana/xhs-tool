@@ -16,10 +16,10 @@
 
 输入一条小红书图文笔记链接，工具能够自动获取该笔记的全部图片，并根据参数选择以下处理方式：
 
-- \`images\`：只下载图片。
-- \`pdf\`：下载图片并按照原始顺序生成 PDF。
-- \`ocr\`：下载图片并进行本地 OCR，输出 Markdown / 文本。
-- \`all\`：同时生成图片、PDF 和 OCR 结果。
+- `images`：只下载图片。
+- `pdf`：下载图片并按照原始顺序生成 PDF。
+- `ocr`：下载图片并进行本地 OCR，输出 Markdown / 文本。
+- `all`：同时生成图片、PDF 和 OCR 结果。
 
 目标使用方式：
 
@@ -222,7 +222,7 @@ xhs-tool URL --mode all
 
 ### 默认行为
 
-如果用户没有指定 \`--output\`：
+如果用户没有指定 `--output`：
 
 ~~~text
 ./output/<safe-note-title>/
@@ -242,7 +242,7 @@ output/
     └── Qwen3.5技术解析.md
 ~~~
 
-如果只执行 \`--mode pdf\`，是否保留图片由 \`--keep-images\` 控制。
+如果只执行 `--mode pdf`，是否保留图片由 `--keep-images` 控制。
 
 但是开发初期建议始终保留图片，便于调试。
 
@@ -345,7 +345,7 @@ class Downloader(Protocol):
         ...
 ~~~
 
-其中 \`DownloadResult\` 至少包含：
+其中 `DownloadResult` 至少包含：
 
 ~~~text
 title
@@ -623,7 +623,7 @@ Access Token
 OCR 输出
 ~~~
 
-因此 \`.gitignore\` 至少应该包含：
+因此 `.gitignore` 至少应该包含：
 
 ~~~text
 .venv/
